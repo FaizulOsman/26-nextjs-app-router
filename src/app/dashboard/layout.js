@@ -1,4 +1,4 @@
-import "./globals.css";
+import SideBar from "@/components/shared/SideBar";
 
 export const metadata = {
   title: "Create Next App",
@@ -7,10 +7,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <div className="min-h-screen">{children}</div>
-      </body>
-    </html>
+    <div className="flex">
+      <SideBar />
+      <div className="w-full">{children}</div>
+    </div>
   );
 }
